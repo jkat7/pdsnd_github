@@ -87,6 +87,7 @@ def time_stats(df):
     if df['Month'].nunique(1) != 1:
         popular_month = df['Month'].mode()[0]
         print(f'The most common month is: {MONTHS[popular_month -1].title()}')
+    # account for case where month is filtered.
     else:
         filter_month = df['Month'].values[0]
         print(f'For the month of {MONTHS[filter_month - 1]}')
@@ -94,6 +95,7 @@ def time_stats(df):
     if df['Day'].nunique(1) != 1:
         popular_day = df['Day'].mode()[0]
         print(f'The most common retal day is: {popular_day}')
+    # account for case where day is filtered.
     else:
         filter_day = df['Day'].values[0]
         print(f'On {filter_day}s ')
