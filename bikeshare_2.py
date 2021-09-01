@@ -177,6 +177,7 @@ def raw_data(df):
     """
     Solicit user input and display raw data 5 row at a time.
     """
+    pd.set_option('display.max_columns',200)
     resp = input('\nWould you like to see the raw data?: ').lower()
     i = 0
     while resp == 'yes' and i < df.shape[0]:
