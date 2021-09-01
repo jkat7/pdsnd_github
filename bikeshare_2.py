@@ -175,6 +175,18 @@ def user_stats(df):
     print(f"\nThis took {time.time() - start_time} seconds.")
     print('-'*40)
 
+def raw_data(df):
+    """
+    Solicit user input and display raw data 5 row at a time.
+    """
+    pd.set_option('display.max_columns',200)
+    resp = input('\nWould you like to see the raw data?: ').lower()
+    i = 0
+    while resp == 'yes' and i < df.shape[0]:
+        print(df.iloc[i:i+5])
+        i += 5
+        resp = input('Would you like to see more?: ')
+
 def main():
     """
     Main function to output data returned from time_stats(), station_stats()
@@ -188,13 +200,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        resp = input('Would you like to see the raw data?: ').lower()
-        # output raw data 5 rows at a time until user ends loop
-        i = 0
-        while resp == 'yes' and i < df.shape[0]:
-            print(df.iloc[i:i+5])
-            i += 5
-            resp = input('Would you like to see more?: ')
+        raw_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
