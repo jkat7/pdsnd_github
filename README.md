@@ -30,5 +30,9 @@ The following descriptive statistics will be computed.
 * washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+https://stackoverflow.com/questions/53037698/how-can-i-find-the-most-frequent-two-column-combination-in-a-dataframe-in-python
+https://stackoverflow.com/questions/53025207/how-do-i-remove-name-and-dtype-from-pandas-output
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.idxmax.html
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.size.html
+https://pandas.pydata.org/pandas-docs/stable/reference/index.html
 
